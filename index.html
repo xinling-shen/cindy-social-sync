@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cindy Social Sync</title>
-    <meta name="description" content="Cindy Social Sync is a private internal reporting tool for syncing authorized TikTok public profile and video metrics to a private Feishu spreadsheet.">
+    <meta name="description" content="Sandbox demo for the Cindy Social Sync TikTok developer app review.">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -19,27 +19,178 @@
       </nav>
     </header>
 
-    <main class="hero">
-      <section aria-label="Application overview">
-        <p class="eyebrow">Private internal reporting</p>
+    <main class="demo-shell">
+      <section class="demo-hero" aria-label="Application overview">
+        <p class="eyebrow">TikTok app review demo</p>
         <h1>Cindy Social Sync</h1>
-        <p class="lede">Cindy Social Sync is a private internal reporting tool that connects an authorized TikTok account and syncs available public profile and video metrics to a private Feishu spreadsheet.</p>
-        <p>The app is used only for private reporting and record keeping. It is not a public service, analytics marketplace, or data resale product.</p>
-        <div class="actions">
-          <a class="button" href="privacy.html">Privacy Policy</a>
-          <a class="button secondary" href="terms.html">Terms of Service</a>
+        <p class="subtitle">Sandbox Demo for TikTok App Review</p>
+        <p class="lede">Cindy Social Sync is a private internal reporting tool that connects an authorized TikTok account and syncs available public profile and public video metrics to a private Feishu spreadsheet.</p>
+      </section>
+
+      <section class="demo-panel" aria-label="Sandbox demo flow">
+        <div class="step-header">
+          <div>
+            <p class="eyebrow">Step 1</p>
+            <h2>Connect TikTok</h2>
+          </div>
+          <button class="button" type="button" id="connectButton">Connect TikTok</button>
+        </div>
+        <div class="status-banner is-muted" id="connectStatus">Click Connect TikTok to start the sandbox review flow.</div>
+        <p class="scope-label" id="loginKitLabel">Product demonstrated: Login Kit</p>
+      </section>
+
+      <section class="demo-panel profile-section" aria-label="Sample profile data">
+        <div class="step-header">
+          <div>
+            <p class="eyebrow">Step 2</p>
+            <h2>Profile section</h2>
+          </div>
+          <span class="pill">Sample authorized account</span>
+        </div>
+        <div class="profile-card">
+          <div class="avatar-placeholder" aria-label="Avatar placeholder">CD</div>
+          <div>
+            <p class="profile-name">Cindy Demo Account</p>
+            <p class="scope-label">Display API scopes demonstrated: user.info.basic, user.info.stats</p>
+          </div>
+        </div>
+        <div class="metric-grid">
+          <div class="metric">
+            <span>Follower count</span>
+            <strong>12,345</strong>
+          </div>
+          <div class="metric">
+            <span>Following count</span>
+            <strong>321</strong>
+          </div>
+          <div class="metric">
+            <span>Total likes</span>
+            <strong>88,000</strong>
+          </div>
+          <div class="metric">
+            <span>Video count</span>
+            <strong>128</strong>
+          </div>
         </div>
       </section>
 
-      <div class="sync-visual" aria-hidden="true">
-        <div class="node source">TikTok</div>
-        <div class="flow-line"></div>
-        <div class="node destination">Feishu</div>
-      </div>
+      <section class="demo-panel" aria-label="Public videos demo">
+        <div class="step-header">
+          <div>
+            <p class="eyebrow">Step 3</p>
+            <h2>Fetch public videos</h2>
+          </div>
+          <button class="button secondary" type="button" id="videosButton">Fetch public videos</button>
+        </div>
+        <p class="scope-label">Display API scope demonstrated: video.list</p>
+        <div class="table-wrap is-hidden" id="videosTableWrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Caption</th>
+                <th>Video URL</th>
+                <th>Publish time</th>
+                <th>View count</th>
+                <th>Like count</th>
+                <th>Comment count</th>
+                <th>Share count</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Spring launch recap</td>
+                <td><a href="https://www.tiktok.com/@cindy.demo/video/1001">tiktok.com/.../1001</a></td>
+                <td>2026-05-18 09:30</td>
+                <td>24,810</td>
+                <td>2,104</td>
+                <td>86</td>
+                <td>319</td>
+              </tr>
+              <tr>
+                <td>Behind the scenes setup</td>
+                <td><a href="https://www.tiktok.com/@cindy.demo/video/1002">tiktok.com/.../1002</a></td>
+                <td>2026-05-17 14:12</td>
+                <td>18,402</td>
+                <td>1,448</td>
+                <td>54</td>
+                <td>211</td>
+              </tr>
+              <tr>
+                <td>Weekly creator report</td>
+                <td><a href="https://www.tiktok.com/@cindy.demo/video/1003">tiktok.com/.../1003</a></td>
+                <td>2026-05-16 18:45</td>
+                <td>31,775</td>
+                <td>3,092</td>
+                <td>127</td>
+                <td>406</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="demo-panel" aria-label="Feishu sync demo">
+        <div class="step-header">
+          <div>
+            <p class="eyebrow">Step 4</p>
+            <h2>Sync to Feishu</h2>
+          </div>
+          <button class="button" type="button" id="syncButton">Sync to Feishu</button>
+        </div>
+        <div class="sync-result is-hidden" id="syncResult">
+          <div class="status-banner">Sync completed</div>
+          <div class="metric-grid compact">
+            <div class="metric">
+              <span>Rows added</span>
+              <strong>3</strong>
+            </div>
+            <div class="metric">
+              <span>Rows updated</span>
+              <strong>2</strong>
+            </div>
+            <div class="metric wide">
+              <span>Last updated</span>
+              <strong id="lastUpdated">--</strong>
+            </div>
+          </div>
+        </div>
+        <p class="scope-label">Data is synced only to a private Feishu spreadsheet for internal social media reporting.</p>
+      </section>
     </main>
 
     <footer class="site-footer">
-      Cindy Social Sync is for private internal reporting only. Data is not sold, published, or shared with third parties.
+      Sandbox demo only. Cindy Social Sync is for private internal reporting, and data is not sold, published, or shared with third parties.
     </footer>
+
+    <script>
+      const connectButton = document.querySelector('#connectButton');
+      const connectStatus = document.querySelector('#connectStatus');
+      const videosButton = document.querySelector('#videosButton');
+      const videosTableWrap = document.querySelector('#videosTableWrap');
+      const syncButton = document.querySelector('#syncButton');
+      const syncResult = document.querySelector('#syncResult');
+      const lastUpdated = document.querySelector('#lastUpdated');
+
+      connectButton.addEventListener('click', () => {
+        connectStatus.classList.remove('is-muted');
+        connectStatus.textContent = 'Sandbox demo: TikTok account connected through Login Kit';
+      });
+
+      videosButton.addEventListener('click', () => {
+        videosTableWrap.classList.remove('is-hidden');
+      });
+
+      syncButton.addEventListener('click', () => {
+        const now = new Date();
+        lastUpdated.textContent = now.toLocaleString([], {
+          year: 'numeric',
+          month: 'short',
+          day: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit',
+        });
+        syncResult.classList.remove('is-hidden');
+      });
+    </script>
   </body>
 </html>
