@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cindy Social Sync</title>
-    <meta name="description" content="Sandbox demo for the Cindy Social Sync TikTok developer app review.">
+    <title>Cindy Creator Showcase</title>
+    <meta name="description" content="Cindy Creator Showcase lets TikTok creators connect their account, view public creator data, and choose public videos to display.">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header class="site-header">
       <a class="brand" href="index.html">
         <span class="brand-mark">C</span>
-        <span>Cindy Social Sync</span>
+        <span>Cindy Creator Showcase</span>
       </a>
       <nav class="nav" aria-label="Legal pages">
         <a href="privacy.html">Privacy Policy</a>
@@ -22,12 +22,12 @@
     <main class="demo-shell">
       <section class="demo-hero" aria-label="Application overview">
         <p class="eyebrow">TikTok app review demo</p>
-        <h1>Cindy Social Sync</h1>
-        <p class="subtitle">Sandbox Demo for TikTok App Review</p>
-        <p class="lede">Cindy Social Sync is a private internal reporting tool that connects an authorized TikTok account and syncs available public profile and public video metrics to a private Feishu spreadsheet.</p>
+        <h1>Cindy Creator Showcase</h1>
+        <p class="subtitle">Connect your TikTok account and showcase your public creator profile and videos.</p>
+        <p class="lede">Cindy Creator Showcase lets TikTok creators connect their own TikTok account, view their public profile and public videos, and choose which videos to display on a creator showcase page.</p>
       </section>
 
-      <section class="demo-panel" aria-label="Sandbox demo flow">
+      <section class="demo-panel" aria-label="Connect TikTok demo">
         <div class="step-header">
           <div>
             <p class="eyebrow">Step 1</p>
@@ -35,23 +35,24 @@
           </div>
           <button class="button" type="button" id="connectButton">Connect TikTok</button>
         </div>
-        <div class="status-banner is-muted" id="connectStatus">Click Connect TikTok to start the sandbox review flow.</div>
-        <p class="scope-label" id="loginKitLabel">Product demonstrated: Login Kit</p>
+        <div class="status-banner is-muted" id="connectStatus">Click Connect TikTok to start the creator showcase demo flow.</div>
       </section>
 
-      <section class="demo-panel profile-section" aria-label="Sample profile data">
+      <section class="demo-panel profile-section" aria-label="Authorized user profile data">
         <div class="step-header">
           <div>
             <p class="eyebrow">Step 2</p>
-            <h2>Profile section</h2>
+            <h2>View Profile</h2>
           </div>
-          <span class="pill">Sample authorized account</span>
+          <span class="pill">Authorized creator profile</span>
         </div>
         <div class="profile-card">
           <div class="avatar-placeholder" aria-label="Avatar placeholder">CD</div>
           <div>
-            <p class="profile-name">Cindy Demo Account</p>
-            <p class="scope-label">Display API scopes demonstrated: user.info.basic, user.info.stats</p>
+            <p class="profile-name">Cindy Demo Creator</p>
+            <p class="profile-detail"><a href="https://www.tiktok.com/@cindy.demo">@cindy.demo</a></p>
+            <p class="profile-detail">Bio: Beauty, lifestyle, and daily creator tips.</p>
+            <p class="profile-detail">Verification status: Verified creator</p>
           </div>
         </div>
         <div class="metric-grid">
@@ -64,7 +65,7 @@
             <strong>321</strong>
           </div>
           <div class="metric">
-            <span>Total likes</span>
+            <span>Likes count</span>
             <strong>88,000</strong>
           </div>
           <div class="metric">
@@ -72,17 +73,18 @@
             <strong>128</strong>
           </div>
         </div>
+        <p class="scope-label">Scopes demonstrated: user.info.profile and user.info.stats</p>
       </section>
 
       <section class="demo-panel" aria-label="Public videos demo">
         <div class="step-header">
           <div>
             <p class="eyebrow">Step 3</p>
-            <h2>Fetch public videos</h2>
+            <h2>Fetch Public Videos</h2>
           </div>
-          <button class="button secondary" type="button" id="videosButton">Fetch public videos</button>
+          <button class="button secondary" type="button" id="videosButton">Fetch Public Videos</button>
         </div>
-        <p class="scope-label">Display API scope demonstrated: video.list</p>
+        <p class="scope-label">Scope demonstrated: video.list</p>
         <div class="table-wrap is-hidden" id="videosTableWrap">
           <table>
             <thead>
@@ -98,8 +100,8 @@
             </thead>
             <tbody>
               <tr>
-                <td>Spring launch recap</td>
-                <td><a href="https://www.tiktok.com/@cindy.demo/video/1001">tiktok.com/.../1001</a></td>
+                <td>Morning creator routine</td>
+                <td><a href="https://www.tiktok.com/@cindy.demo/video/1001">tiktok.com/@cindy.demo/video/1001</a></td>
                 <td>2026-05-18 09:30</td>
                 <td>24,810</td>
                 <td>2,104</td>
@@ -108,7 +110,7 @@
               </tr>
               <tr>
                 <td>Behind the scenes setup</td>
-                <td><a href="https://www.tiktok.com/@cindy.demo/video/1002">tiktok.com/.../1002</a></td>
+                <td><a href="https://www.tiktok.com/@cindy.demo/video/1002">tiktok.com/@cindy.demo/video/1002</a></td>
                 <td>2026-05-17 14:12</td>
                 <td>18,402</td>
                 <td>1,448</td>
@@ -116,8 +118,8 @@
                 <td>211</td>
               </tr>
               <tr>
-                <td>Weekly creator report</td>
-                <td><a href="https://www.tiktok.com/@cindy.demo/video/1003">tiktok.com/.../1003</a></td>
+                <td>Creator Q&amp;A highlights</td>
+                <td><a href="https://www.tiktok.com/@cindy.demo/video/1003">tiktok.com/@cindy.demo/video/1003</a></td>
                 <td>2026-05-16 18:45</td>
                 <td>31,775</td>
                 <td>3,092</td>
@@ -129,37 +131,53 @@
         </div>
       </section>
 
-      <section class="demo-panel" aria-label="Feishu sync demo">
+      <section class="demo-panel" aria-label="Select videos to display">
         <div class="step-header">
           <div>
             <p class="eyebrow">Step 4</p>
-            <h2>Sync to Feishu</h2>
+            <h2>Choose Videos to Display</h2>
           </div>
-          <button class="button" type="button" id="syncButton">Sync to Feishu</button>
+          <span class="pill">Creator controls</span>
         </div>
-        <div class="sync-result is-hidden" id="syncResult">
-          <div class="status-banner">Sync completed</div>
-          <div class="metric-grid compact">
-            <div class="metric">
-              <span>Rows added</span>
-              <strong>3</strong>
-            </div>
-            <div class="metric">
-              <span>Rows updated</span>
-              <strong>2</strong>
-            </div>
-            <div class="metric wide">
-              <span>Last updated</span>
-              <strong id="lastUpdated">--</strong>
+        <div class="video-chooser" id="videoChooser">
+          <label class="video-option">
+            <input type="checkbox" data-video="routine" checked>
+            <span>Morning creator routine</span>
+          </label>
+          <label class="video-option">
+            <input type="checkbox" data-video="setup" checked>
+            <span>Behind the scenes setup</span>
+          </label>
+          <label class="video-option">
+            <input type="checkbox" data-video="qa" checked>
+            <span>Creator Q&amp;A highlights</span>
+          </label>
+        </div>
+      </section>
+
+      <section class="demo-panel" aria-label="Creator showcase preview">
+        <div class="step-header">
+          <div>
+            <p class="eyebrow">Step 5</p>
+            <h2>Preview Showcase Page</h2>
+          </div>
+          <button class="button" type="button" id="previewButton">Preview Showcase Page</button>
+        </div>
+        <div class="showcase-preview is-hidden" id="showcasePreview">
+          <div class="showcase-header">
+            <div class="avatar-placeholder small" aria-label="Avatar placeholder">CD</div>
+            <div>
+              <h3>Cindy Demo Creator</h3>
+              <p>Beauty, lifestyle, and daily creator tips.</p>
             </div>
           </div>
+          <div class="showcase-grid" id="showcaseGrid"></div>
         </div>
-        <p class="scope-label">Data is synced only to a private Feishu spreadsheet for internal social media reporting.</p>
       </section>
     </main>
 
     <footer class="site-footer">
-      Sandbox demo only. Cindy Social Sync is for private internal reporting, and data is not sold, published, or shared with third parties.
+      Cindy Creator Showcase helps creators display their own authorized public TikTok profile and public videos.
     </footer>
 
     <script>
@@ -167,29 +185,72 @@
       const connectStatus = document.querySelector('#connectStatus');
       const videosButton = document.querySelector('#videosButton');
       const videosTableWrap = document.querySelector('#videosTableWrap');
-      const syncButton = document.querySelector('#syncButton');
-      const syncResult = document.querySelector('#syncResult');
-      const lastUpdated = document.querySelector('#lastUpdated');
+      const previewButton = document.querySelector('#previewButton');
+      const showcasePreview = document.querySelector('#showcasePreview');
+      const showcaseGrid = document.querySelector('#showcaseGrid');
+      const videoChooser = document.querySelector('#videoChooser');
+
+      const videos = {
+        routine: {
+          title: 'Morning creator routine',
+          stats: '24,810 views',
+          url: 'https://www.tiktok.com/@cindy.demo/video/1001',
+        },
+        setup: {
+          title: 'Behind the scenes setup',
+          stats: '18,402 views',
+          url: 'https://www.tiktok.com/@cindy.demo/video/1002',
+        },
+        qa: {
+          title: 'Creator Q&A highlights',
+          stats: '31,775 views',
+          url: 'https://www.tiktok.com/@cindy.demo/video/1003',
+        },
+      };
+
+      function renderShowcase() {
+        const selected = [...videoChooser.querySelectorAll('input:checked')].map((input) => input.dataset.video);
+        showcaseGrid.innerHTML = '';
+
+        selected.forEach((id) => {
+          const video = videos[id];
+          const card = document.createElement('article');
+          card.className = 'showcase-card';
+          card.innerHTML = `
+            <div class="video-thumb">${video.title.charAt(0)}</div>
+            <h4>${video.title}</h4>
+            <p>${video.stats}</p>
+            <a href="${video.url}">View on TikTok</a>
+          `;
+          showcaseGrid.appendChild(card);
+        });
+
+        if (selected.length === 0) {
+          const empty = document.createElement('p');
+          empty.className = 'empty-state';
+          empty.textContent = 'No videos selected for the showcase preview.';
+          showcaseGrid.appendChild(empty);
+        }
+      }
 
       connectButton.addEventListener('click', () => {
         connectStatus.classList.remove('is-muted');
-        connectStatus.textContent = 'Sandbox demo: TikTok account connected through Login Kit';
+        connectStatus.textContent = 'User connects their own TikTok account through Login Kit.';
       });
 
       videosButton.addEventListener('click', () => {
         videosTableWrap.classList.remove('is-hidden');
       });
 
-      syncButton.addEventListener('click', () => {
-        const now = new Date();
-        lastUpdated.textContent = now.toLocaleString([], {
-          year: 'numeric',
-          month: 'short',
-          day: 'numeric',
-          hour: '2-digit',
-          minute: '2-digit',
-        });
-        syncResult.classList.remove('is-hidden');
+      previewButton.addEventListener('click', () => {
+        renderShowcase();
+        showcasePreview.classList.remove('is-hidden');
+      });
+
+      videoChooser.addEventListener('change', () => {
+        if (!showcasePreview.classList.contains('is-hidden')) {
+          renderShowcase();
+        }
       });
     </script>
   </body>
