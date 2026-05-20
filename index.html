@@ -3,17 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cindy Creator Showcase</title>
-    <meta name="description" content="Cindy Creator Showcase lets TikTok creators connect their account, view public creator data, and choose public videos to display.">
+    <title>Cindy Creator Studio</title>
+    <meta name="description" content="Cindy Creator Studio lets creators connect TikTok, view public video performance, upload video drafts, and share creator content.">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header class="site-header">
       <a class="brand" href="index.html">
         <span class="brand-mark">C</span>
-        <span>Cindy Creator Showcase</span>
+        <span>Cindy Creator Studio</span>
       </a>
-      <nav class="nav" aria-label="Legal pages">
+      <nav class="nav" aria-label="Site pages">
+        <a href="callback.html">OAuth Redirect</a>
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms of Service</a>
       </nav>
@@ -22,9 +23,9 @@
     <main class="demo-shell">
       <section class="demo-hero" aria-label="Application overview">
         <p class="eyebrow">TikTok app review demo</p>
-        <h1>Cindy Creator Showcase</h1>
-        <p class="subtitle">Connect your TikTok account and showcase your public creator profile and videos.</p>
-        <p class="lede">Cindy Creator Showcase lets TikTok creators connect their own TikTok account, view their public profile and public videos, and choose which videos to display on a creator showcase page.</p>
+        <h1>Cindy Creator Studio</h1>
+        <p class="subtitle">Connect your TikTok account, view public video performance, upload video drafts, and share creator content.</p>
+        <p class="lede">Cindy Creator Studio lets creators connect their own TikTok account, view basic account stats and public videos, upload their own videos to TikTok as drafts, and share selected creator content.</p>
       </section>
 
       <section class="demo-panel" aria-label="Connect TikTok demo">
@@ -35,27 +36,28 @@
           </div>
           <button class="button" type="button" id="connectButton">Connect TikTok</button>
         </div>
-        <div class="status-banner is-muted" id="connectStatus">Click Connect TikTok to start the creator showcase demo flow.</div>
-      </section>
-
-      <section class="demo-panel profile-section" aria-label="Authorized user profile data">
-        <div class="step-header">
-          <div>
-            <p class="eyebrow">Step 2</p>
-            <h2>View Profile</h2>
-          </div>
-          <span class="pill">Authorized creator profile</span>
-        </div>
-        <div class="profile-card">
+        <div class="status-banner is-muted" id="connectStatus">Click Connect TikTok to start the creator studio demo flow.</div>
+        <div class="profile-card compact is-hidden" id="basicProfile">
           <div class="avatar-placeholder" aria-label="Avatar placeholder">CD</div>
           <div>
             <p class="profile-name">Cindy Demo Creator</p>
-            <p class="profile-detail"><a href="https://www.tiktok.com/@cindy.demo">@cindy.demo</a></p>
-            <p class="profile-detail">Bio: Beauty, lifestyle, and daily creator tips.</p>
-            <p class="profile-detail">Verification status: Verified creator</p>
+            <p class="profile-detail">Display name: Cindy Demo Creator</p>
+            <p class="profile-detail">Open ID: open_id_cindy_demo_2026</p>
           </div>
         </div>
-        <div class="metric-grid">
+        <p class="scope-label">Product demonstrated: Login Kit</p>
+        <p class="scope-label">Scope demonstrated: user.info.basic</p>
+      </section>
+
+      <section class="demo-panel" aria-label="Account stats demo">
+        <div class="step-header">
+          <div>
+            <p class="eyebrow">Step 2</p>
+            <h2>View Account Stats</h2>
+          </div>
+          <button class="button secondary" type="button" id="statsButton">View Account Stats</button>
+        </div>
+        <div class="metric-grid is-hidden" id="statsGrid">
           <div class="metric">
             <span>Follower count</span>
             <strong>12,345</strong>
@@ -73,7 +75,7 @@
             <strong>128</strong>
           </div>
         </div>
-        <p class="scope-label">Scopes demonstrated: user.info.profile and user.info.stats</p>
+        <p class="scope-label">Scope demonstrated: user.info.stats</p>
       </section>
 
       <section class="demo-panel" aria-label="Public videos demo">
@@ -131,126 +133,83 @@
         </div>
       </section>
 
-      <section class="demo-panel" aria-label="Select videos to display">
+      <section class="demo-panel" aria-label="Upload video draft demo">
         <div class="step-header">
           <div>
             <p class="eyebrow">Step 4</p>
-            <h2>Choose Videos to Display</h2>
+            <h2>Upload Video Draft</h2>
           </div>
-          <span class="pill">Creator controls</span>
+          <button class="button" type="button" id="uploadButton">Upload to TikTok Draft</button>
         </div>
-        <div class="video-chooser" id="videoChooser">
-          <label class="video-option">
-            <input type="checkbox" data-video="routine" checked>
-            <span>Morning creator routine</span>
-          </label>
-          <label class="video-option">
-            <input type="checkbox" data-video="setup" checked>
-            <span>Behind the scenes setup</span>
-          </label>
-          <label class="video-option">
-            <input type="checkbox" data-video="qa" checked>
-            <span>Creator Q&amp;A highlights</span>
-          </label>
+        <div class="upload-demo">
+          <div class="video-preview-placeholder">Video preview</div>
+          <div>
+            <label class="field-label" for="mockFile">Selected file name</label>
+            <input class="text-input" id="mockFile" type="text" value="creator-studio-demo.mp4">
+            <label class="field-label" for="captionField">Caption</label>
+            <textarea class="text-input caption-input" id="captionField">New creator studio draft from Cindy Creator Studio.</textarea>
+          </div>
+        </div>
+        <div class="status-stack is-hidden" id="uploadResult">
+          <div class="status-banner">Product demonstrated: Content Posting API</div>
+          <div class="status-banner">Scope demonstrated: video.upload</div>
+          <div class="status-banner">Video uploaded to TikTok as a draft.</div>
+          <div class="status-banner">The creator continues editing and publishing inside TikTok.</div>
         </div>
       </section>
 
-      <section class="demo-panel" aria-label="Creator showcase preview">
+      <section class="demo-panel" aria-label="Share Kit demo">
         <div class="step-header">
           <div>
             <p class="eyebrow">Step 5</p>
-            <h2>Preview Showcase Page</h2>
+            <h2>Share Creator Content</h2>
           </div>
-          <button class="button" type="button" id="previewButton">Preview Showcase Page</button>
+          <button class="button secondary" type="button" id="shareButton">Share to TikTok</button>
         </div>
-        <div class="showcase-preview is-hidden" id="showcasePreview">
-          <div class="showcase-header">
-            <div class="avatar-placeholder small" aria-label="Avatar placeholder">CD</div>
-            <div>
-              <h3>Cindy Demo Creator</h3>
-              <p>Beauty, lifestyle, and daily creator tips.</p>
-            </div>
-          </div>
-          <div class="showcase-grid" id="showcaseGrid"></div>
+        <div class="status-stack is-hidden" id="shareResult">
+          <div class="status-banner">Product demonstrated: Share Kit</div>
+          <div class="status-banner">Share Kit opens TikTok so the creator can share selected content.</div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      Cindy Creator Showcase helps creators display their own authorized public TikTok profile and public videos.
+      Cindy Creator Studio helps creators connect TikTok, review public video performance, upload video drafts, and share creator content.
     </footer>
 
     <script>
       const connectButton = document.querySelector('#connectButton');
       const connectStatus = document.querySelector('#connectStatus');
+      const basicProfile = document.querySelector('#basicProfile');
+      const statsButton = document.querySelector('#statsButton');
+      const statsGrid = document.querySelector('#statsGrid');
       const videosButton = document.querySelector('#videosButton');
       const videosTableWrap = document.querySelector('#videosTableWrap');
-      const previewButton = document.querySelector('#previewButton');
-      const showcasePreview = document.querySelector('#showcasePreview');
-      const showcaseGrid = document.querySelector('#showcaseGrid');
-      const videoChooser = document.querySelector('#videoChooser');
-
-      const videos = {
-        routine: {
-          title: 'Morning creator routine',
-          stats: '24,810 views',
-          url: 'https://www.tiktok.com/@cindy.demo/video/1001',
-        },
-        setup: {
-          title: 'Behind the scenes setup',
-          stats: '18,402 views',
-          url: 'https://www.tiktok.com/@cindy.demo/video/1002',
-        },
-        qa: {
-          title: 'Creator Q&A highlights',
-          stats: '31,775 views',
-          url: 'https://www.tiktok.com/@cindy.demo/video/1003',
-        },
-      };
-
-      function renderShowcase() {
-        const selected = [...videoChooser.querySelectorAll('input:checked')].map((input) => input.dataset.video);
-        showcaseGrid.innerHTML = '';
-
-        selected.forEach((id) => {
-          const video = videos[id];
-          const card = document.createElement('article');
-          card.className = 'showcase-card';
-          card.innerHTML = `
-            <div class="video-thumb">${video.title.charAt(0)}</div>
-            <h4>${video.title}</h4>
-            <p>${video.stats}</p>
-            <a href="${video.url}">View on TikTok</a>
-          `;
-          showcaseGrid.appendChild(card);
-        });
-
-        if (selected.length === 0) {
-          const empty = document.createElement('p');
-          empty.className = 'empty-state';
-          empty.textContent = 'No videos selected for the showcase preview.';
-          showcaseGrid.appendChild(empty);
-        }
-      }
+      const uploadButton = document.querySelector('#uploadButton');
+      const uploadResult = document.querySelector('#uploadResult');
+      const shareButton = document.querySelector('#shareButton');
+      const shareResult = document.querySelector('#shareResult');
 
       connectButton.addEventListener('click', () => {
         connectStatus.classList.remove('is-muted');
-        connectStatus.textContent = 'User connects their own TikTok account through Login Kit.';
+        connectStatus.textContent = 'TikTok account connected through Login Kit.';
+        basicProfile.classList.remove('is-hidden');
+      });
+
+      statsButton.addEventListener('click', () => {
+        statsGrid.classList.remove('is-hidden');
       });
 
       videosButton.addEventListener('click', () => {
         videosTableWrap.classList.remove('is-hidden');
       });
 
-      previewButton.addEventListener('click', () => {
-        renderShowcase();
-        showcasePreview.classList.remove('is-hidden');
+      uploadButton.addEventListener('click', () => {
+        uploadResult.classList.remove('is-hidden');
       });
 
-      videoChooser.addEventListener('change', () => {
-        if (!showcasePreview.classList.contains('is-hidden')) {
-          renderShowcase();
-        }
+      shareButton.addEventListener('click', () => {
+        shareResult.classList.remove('is-hidden');
       });
     </script>
   </body>
