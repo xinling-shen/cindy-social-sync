@@ -235,6 +235,12 @@ p {
   font-weight: 900;
 }
 
+.profile-detail {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+
 .metric-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -303,8 +309,94 @@ tr:last-child td {
   border-bottom: 0;
 }
 
-.sync-result {
-  margin-top: 4px;
+.video-chooser {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.video-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 58px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.video-option input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent);
+}
+
+.showcase-preview {
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.showcase-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.showcase-header h3 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.showcase-header p,
+.showcase-card p,
+.empty-state {
+  margin: 4px 0 0;
+  font-size: 15px;
+}
+
+.avatar-placeholder.small {
+  width: 54px;
+  height: 54px;
+  font-size: 18px;
+}
+
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.showcase-card {
+  min-height: 220px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--soft);
+}
+
+.video-thumb {
+  display: grid;
+  height: 118px;
+  place-items: center;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--accent), var(--teal));
+  color: #fff;
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.showcase-card h4 {
+  margin: 12px 0 0;
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.25;
 }
 
 .is-hidden {
@@ -366,7 +458,9 @@ li + li {
   }
 
   .metric-grid,
-  .metric-grid.compact {
+  .metric-grid.compact,
+  .video-chooser,
+  .showcase-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -377,7 +471,9 @@ li + li {
 
 @media (max-width: 520px) {
   .metric-grid,
-  .metric-grid.compact {
+  .metric-grid.compact,
+  .video-chooser,
+  .showcase-grid {
     grid-template-columns: 1fr;
   }
 
