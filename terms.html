@@ -3,17 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Terms of Service | Cindy Creator Showcase</title>
-    <meta name="description" content="Terms of Service for Cindy Creator Showcase.">
+    <title>Terms of Service | Cindy Creator Studio</title>
+    <meta name="description" content="Terms of Service for Cindy Creator Studio.">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header class="site-header">
       <a class="brand" href="index.html">
         <span class="brand-mark">C</span>
-        <span>Cindy Creator Showcase</span>
+        <span>Cindy Creator Studio</span>
       </a>
-      <nav class="nav" aria-label="Legal pages">
+      <nav class="nav" aria-label="Site pages">
+        <a href="callback.html">OAuth Redirect</a>
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms of Service</a>
       </nav>
@@ -24,19 +25,22 @@
       <h1>Terms of Service</h1>
       <p class="meta">Effective date: May 20, 2026</p>
 
-      <p>Cindy Creator Showcase is a web app that lets TikTok creators connect their own TikTok account, view their public creator profile and public videos, and choose which videos to display on a creator showcase page.</p>
+      <p>Cindy Creator Studio is a public user-facing creator tool that lets TikTok creators connect their own TikTok account, view basic account stats and public videos, upload their own videos to TikTok as drafts, and share selected creator content.</p>
 
-      <h2>Creator Showcase Use</h2>
-      <p>The app is intended for creators who want to review and display their own authorized public TikTok profile information and public videos.</p>
+      <h2>Creator Tool Use</h2>
+      <p>The app is intended for creators who want to review their own authorized TikTok account stats, review public video performance, prepare video draft uploads, and share selected creator content through TikTok. Users are responsible for the videos and captions they provide.</p>
 
       <h2>TikTok Authorization</h2>
       <p>Users authorize TikTok access through TikTok Login Kit. The app only accesses TikTok account data after the account owner grants authorization through TikTok's official authorization flow.</p>
 
+      <h2>Products and Scopes</h2>
+      <p>The app demonstrates Login Kit, Content Posting API, and Share Kit. It may request the following TikTok scopes when needed for the creator workflow: user.info.basic, user.info.stats, video.list, and video.upload.</p>
+
       <h2>User Control</h2>
-      <p>Creators can choose which authorized public videos appear in their showcase preview. Users can stop using the app or revoke TikTok authorization at any time through TikTok account settings or any other authorization management tools provided by TikTok.</p>
+      <p>Uploaded videos are sent to TikTok as drafts, and the creator continues editing and publishing inside TikTok. Users can stop using the app or revoke TikTok authorization at any time through TikTok account settings or other authorization management tools provided by TikTok.</p>
 
       <h2>Data Handling</h2>
-      <p>Data accessed through the app is used to display the user's authorized public profile and selected public videos in the creator showcase experience.</p>
+      <p>Data accessed through the app is used to display the user's authorized TikTok basic account data, account stats, public video performance, upload draft status, and Share Kit demo status inside the creator studio experience.</p>
       <p>Data is not sold, rented, or shared with data brokers or advertising networks.</p>
 
       <h2>Changes</h2>
@@ -44,7 +48,7 @@
     </main>
 
     <footer class="site-footer">
-      Cindy Creator Showcase helps creators display their own authorized public TikTok profile and public videos.
+      Cindy Creator Studio helps creators connect TikTok, review public video performance, upload video drafts, and share creator content.
     </footer>
   </body>
 </html>
