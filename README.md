@@ -1,6 +1,6 @@
-# Cindy Social Sync
+# Cindy Creator Showcase
 
-Static website for the Cindy Social Sync TikTok developer app.
+Static website for the Cindy Creator Showcase TikTok developer app.
 
 ## GitHub Pages
 
