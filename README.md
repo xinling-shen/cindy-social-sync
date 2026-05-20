@@ -1,6 +1,6 @@
-# Cindy Creator Showcase
+# Cindy Creator Studio
 
-Static website for the Cindy Creator Showcase TikTok developer app.
+Static website for the Cindy Creator Studio TikTok developer app.
 
 ## GitHub Pages
 
